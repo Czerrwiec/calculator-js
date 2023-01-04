@@ -1,22 +1,129 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+::before,
+::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 62.5%;
 }
 
 body {
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 1.8rem;
-    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
-    color: rgb(84, 84, 84);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	height: 100vh;
+	background: linear-gradient(to right, #a7b8ef, #c7e1ed);
+	color: rgb(60, 60, 60);
+	font-size: 1.6rem;
 }
 
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+.calculator {
+    height: 60vh;
+    min-width: 370px;
+    max-width: 370px;
+}
+
+
+.calculator__display {
     width: 100%;
+    min-height: 20%;
+    max-height: min-content;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    word-break: break-all;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 5px;
+    background-color: rgba(220, 228, 236, 0.649);
+}
+
+.currentNumber {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.previousNumber {
+    font-size: 20px;
+    color: rgb(90, 90, 90);
+}
+
+.mathSign {
+    font-size: 22px;
+}
+
+.calculator__panel {
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin-top: 5px;
+    gap: 1px;
+}
+
+.calculator__panel button {
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.466);
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color .2s;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.566);
+}
+
+.equals {
+    grid-column: -1/-2;
+    grid-row: -3/-1;
+}
+
+.calculator__history {
+    height: 60vh;
+    margin: 20px;
+    width: 150px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.266);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.history {
+    list-style: none;
+}
+
+.history-title {
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+.history-btn {
+    display:none;
+    padding:6px;
+    border: none;
+    background: rgba(0, 0, 0, 0.366);
+    color: white;
+    font-size: 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 5px;
+    outline: none;
+}
+
+.history-btn.active {
+    display: inline-block;
+}
+
+.history-item {
+    margin: 5px 0;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.400);
+    padding-bottom: 2px;
 }
