@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.8rem;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    color: rgb(84, 84, 84);
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
