@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
     <link rel="stylesheet" href="./style.css">
     <title>JavaScript Calculator</title>
 </head>
@@ -17,11 +18,11 @@
 
     <div class="calculator">
         <div class="calculator__display" data-bind-js>
-            <div class="previousNumber" data-bind-js>
-                <p>123</p>
-                <span class="mathSign" data-bind-js>+</span>
+            <div>
+                <p class="previousNumber" data-bind-js></p>
+                <span class="mathSign" data-bind-js></span>
             </div>
-            <p class="currentNumber" data-bind-js>5445</p>
+            <p class="currentNumber" data-bind-js></p>
         </div>
 
         <div class="calculator__panel">
@@ -43,16 +44,18 @@
             <button class="equals operator">=</button>
             <button class="number">0</button>
             <button class="number">00</button>
-            <button class="dot operator">.</button>
+            <button class="dot number">.</button>
         </div>
     </div>
-    <div class="calculator__history">
-        <p class="history-title" data-bind-js>last calculations <button class="history-btn" data-bind-js>clear history</button></p>
+    <div data-simplebar class="calculator__history">
+        <p class="history-title" data-bind-js>last calculations <button class="history-btn" data-bind-js>clear
+                history</button></p>
         <hr>
         <ul class="history" data-bind-js>
         </ul>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="./script.js"></script>
 </body>
 
